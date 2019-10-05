@@ -12,9 +12,9 @@ node {
 
     stage('Deploy'){
       if(env.BRANCH_NAME == 'master'){
-        sh 'docker build -t 172.16.0.23:5000/react-app --no-cache .'
-        sh 'docker push 172.16.0.23:5000/react-app'
-        sh 'docker rmi -f react-app 172.16.0.23:5000/react-app'
+        sh 'docker build -t zularbine/react-app --no-cache .'
+        sh 'docker push zularbine/react-app'
+        sh 'docker rmi -f react-app zularbine/react-app'
       }
     }
   }
